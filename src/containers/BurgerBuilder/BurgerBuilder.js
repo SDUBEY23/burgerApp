@@ -90,29 +90,52 @@ class BurgerBuilder extends Component {
     }
 
     purchaseContinueHandler = () => {
-        //alert('You continue!');
-        this.setState({loading: true});
-        const order = {
-            ingredients: this.state.ingredients,
-            price:this.state.totalPrice,
-            customer: {
-                name: 'Swapnil Dubey',
-                address: {
-                    street:'Ghar',
-                    zipCode:243003,
-                    country:'India'
-                },
-                email:'swapnil.dubey@gmail.com'
-            },
-            deliveryMethod:'fastest'
-        }
-        axios.post('/orders.json',order)
-        .then(response => {
-            this.setState({loading: false, purchasing: false});
-        } )
-        .catch(error=> {
-            this.setState({loading: false, purchasing: false});
-            });
+        // //alert('You continue!');
+        // this.setState({loading: true});
+        // const order = {
+        //     ingredients: this.state.ingredients,
+        //     price:this.state.totalPrice,
+        //     customer: {
+        //         name: 'Swapnil Dubey',
+        //         address: {
+        //             street:'Ghar',
+        //             zipCode:243003,
+        //             country:'India'
+        //         },
+        //         email:'swapnil.dubey@gmail.com'
+        //     },
+        //     deliveryMethod:'fastest'
+        // }
+        // axios.post('/orders.json',order)
+        // .then(response => {
+        //     this.setState({l // //alert('You continue!');
+        // this.setState({loading: true});
+        // const order = {
+        //     ingredients: this.state.ingredients,
+        //     price:this.state.totalPrice,
+        //     customer: {
+        //         name: 'Swapnil Dubey',
+        //         address: {
+        //             street:'Ghar',
+        //             zipCode:243003,
+        //             country:'India'
+        //         },
+        //         email:'swapnil.dubey@gmail.com'
+        //     },
+        //     deliveryMethod:'fastest'
+        // }
+        // axios.post('/orders.json',order)
+        // .then(response => {
+        //     this.setState({loading: false, purchasing: false});
+        // } )
+        // .catch(error=> {
+        //     this.setState({loading: false, purchasing: false});
+        //     });oading: false, purchasing: false});
+        // } )
+        // .catch(error=> {
+        //     this.setState({loading: false, purchasing: false});
+        //     });
+        this.props.history.push('/checkout')
     }
 
     render () {
