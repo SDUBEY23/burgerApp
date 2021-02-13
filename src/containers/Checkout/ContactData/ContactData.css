@@ -9,9 +9,7 @@
     /* background-color: #9CA3AF; */
 }
 
-.Input{
-    display:block;
-}
+
 
 @media(max-width:600px){
     .ContactData{
